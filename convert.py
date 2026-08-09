@@ -26,7 +26,7 @@ output_dir.mkdir(exist_ok=True)
 # Loop through every page and save as an image
 for i, page in enumerate(doc):
   pix = page.get_pixmap(dpi=300)  # High resolution 300 DPI
-  pix.save(output_dir / f"{input_path.stem}_page_{i+1}.png")
+  pix.save(output_dir / f"{input_path.stem}_page_{i+1:02d}.png")
 
 doc.close()
 
